@@ -261,7 +261,6 @@ gseaplot2 <- function(x, geneSetID, title = "", color="green", base_size = 11,
         rownames(pd) <- ""
         pd <- pd[, ]
 
-        pd <- pd[,-1]
         pd <- round(pd, 4)
 
         tp <- tableGrob2(pd, p.res)
