@@ -257,9 +257,9 @@ gseaplot2 <- function(x, geneSetID, title = "", color="green", base_size = 11,
     }
 
     if (pvalue_table) {
-        pd <- x[geneSetID, c("Description", "pvalue", "p.adjust")]
-        # pd <- pd[order(pd[,1], decreasing=FALSE),]
-        rownames(pd) <- pd$Description
+        pd <- x[geneSetID, c("NES", "pvalue", "p.adjust")]
+        rownames(pd) <- ""
+        pd <- pd[, ]
 
         pd <- pd[,-1]
         pd <- round(pd, 4)
